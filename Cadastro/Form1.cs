@@ -49,23 +49,44 @@ namespace Cadastro
         {
             e.Handled = true;
         }
-        // testar o masculino e o feminino
-        private void Check(object sender, EventArgs e)
-        {
-            if (CheckMas.Checked)
-                CheckFem.Checked = false;
-        }
-        private void Check2(object sender, EventArgs e)
-        {
-            if (CheckFem.Checked)
-                CheckMas.Checked = false;
-        }
-        // parte para testar os valores incompleta
+        // add para lista
         private void TestAll(object sender, EventArgs e)
         {
-            for (int i = 0; i < 11; i++)
-            {
-            }
+            List<string> todos = new List<string>();
+            todos.Add(textBox1.Text);
+            todos.Add(comboBox1.Text);
+            todos.Add(comboBox2.Text);
+            todos.Add(comboBox3.Text);
+            if (Feminino.Checked) todos.Add(Feminino.Text);
+            else todos.Add(radioButton1.Text);
+            todos.Add(textBox2.Text);
+            todos.Add(comboBox4.Text);
+            todos.Add(textBox3.Text);
+            todos.Add(textBox4.Text);
+            todos.Add(textBox5.Text);
+            todos.Add(textBox6.Text);
+            todos.Add(textBox7.Text);
+            todos.Add(textBox8.Text);
+            todos.Add(textBox9.Text);
+            todos.Add(textBox10.Text);
+            todos.Add(textBox11.Text);
+            todos.Add(comboBox5.Text);
+            todos.Add(comboBox6.Text);
+            todos.Add(comboBox7.Text);
+            todos.Add(numericUpDown1.Value.ToString());
+            listBox1.Items.Add(todos[0] + "   " + todos[1] + "/" + todos[2] + "/" + todos[3] + "   " + 
+                todos[4] + "   " + todos[5] + "   " + todos[6] + "   " + todos[7] + "   " + todos[8] + "   " +
+                todos[9] + "   " + todos[10] + "   " + todos[11] + "   " + todos[12] + "   " + todos[13] +
+                "   " + todos[14] + "   " + todos[15] + todos[16] + "   " + todos[17] +
+                "   " + todos[18] + "   " + todos[19]);
+            if(listBox1.Size.Height < 600)
+                listBox1.Size += listBox1.Size;
+        }
+        // mudar o tamanho no voltar e n
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Size.Height > 600)
+                listBox1.Size = listBox2.Size;
         }
     }
 }
