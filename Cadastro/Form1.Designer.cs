@@ -31,37 +31,34 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.Nome = new System.Windows.Forms.TextBox();
+            this.Mês = new System.Windows.Forms.ComboBox();
+            this.Ano = new System.Windows.Forms.ComboBox();
+            this.Profissão = new System.Windows.Forms.TextBox();
+            this.EstadoCivil = new System.Windows.Forms.ComboBox();
+            this.País = new System.Windows.Forms.TextBox();
+            this.RG = new System.Windows.Forms.TextBox();
+            this.Cidade = new System.Windows.Forms.TextBox();
+            this.Rua = new System.Windows.Forms.TextBox();
+            this.Complemento = new System.Windows.Forms.TextBox();
+            this.Nº = new System.Windows.Forms.TextBox();
+            this.Dia = new System.Windows.Forms.ComboBox();
+            this.Telefone = new System.Windows.Forms.TextBox();
+            this.DDD = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.Rest = new System.Windows.Forms.ComboBox();
+            this.Sangue = new System.Windows.Forms.ComboBox();
+            this.Raça = new System.Windows.Forms.ComboBox();
+            this.Filhos = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.Sal = new System.Windows.Forms.TextBox();
-            this.Feminino = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.Sexualidade = new System.Windows.Forms.ComboBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Filhos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,24 +92,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.TestAll);
             // 
-            // textBox1
+            // Nome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(723, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 29);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Nome";
-            this.textBox1.Click += new System.EventHandler(this.Play);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
+            this.Nome.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nome.ForeColor = System.Drawing.Color.Silver;
+            this.Nome.Location = new System.Drawing.Point(723, 116);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(210, 29);
+            this.Nome.TabIndex = 4;
+            this.Nome.Text = "Nome";
+            this.Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
             // 
-            // comboBox2
+            // Mês
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.Mês.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Mês.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mês.ForeColor = System.Drawing.Color.Silver;
+            this.Mês.FormattingEnabled = true;
+            this.Mês.Items.AddRange(new object[] {
             "Jan",
             "Fev",
             "Mar",
@@ -125,17 +123,17 @@
             "Out",
             "Nov",
             "Dez"});
-            this.comboBox2.Location = new System.Drawing.Point(794, 155);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(69, 27);
-            this.comboBox2.TabIndex = 9;
-            this.comboBox2.Text = "Mês";
-            this.comboBox2.TextChanged += new System.EventHandler(this.ComboPlay);
-            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.Mês.Location = new System.Drawing.Point(794, 151);
+            this.Mês.Name = "Mês";
+            this.Mês.Size = new System.Drawing.Size(69, 27);
+            this.Mês.TabIndex = 9;
+            this.Mês.Text = "Mês";
+            this.Mês.TextChanged += new System.EventHandler(this.ComboPlay);
+            this.Mês.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
-            // comboBox3
+            // Ano
             // 
-            this.comboBox3.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Ano.AutoCompleteCustomSource.AddRange(new string[] {
             "2014",
             "2013",
             "2012",
@@ -221,12 +219,13 @@
             "1932",
             "1931",
             "1930"});
-            this.comboBox3.DropDownHeight = 290;
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.IntegralHeight = false;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.Ano.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Ano.DropDownHeight = 290;
+            this.Ano.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ano.ForeColor = System.Drawing.Color.Silver;
+            this.Ano.FormattingEnabled = true;
+            this.Ano.IntegralHeight = false;
+            this.Ano.Items.AddRange(new object[] {
             "2014",
             "2013",
             "2012",
@@ -312,118 +311,118 @@
             "1932",
             "1931",
             "1930"});
-            this.comboBox3.Location = new System.Drawing.Point(864, 155);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(69, 27);
-            this.comboBox3.TabIndex = 10;
-            this.comboBox3.Text = "Ano";
-            this.comboBox3.TextChanged += new System.EventHandler(this.ComboPlay);
-            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.Ano.Location = new System.Drawing.Point(864, 151);
+            this.Ano.Name = "Ano";
+            this.Ano.Size = new System.Drawing.Size(69, 27);
+            this.Ano.TabIndex = 10;
+            this.Ano.Text = "Ano";
+            this.Ano.TextChanged += new System.EventHandler(this.ComboPlay);
+            this.Ano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
-            // textBox2
+            // Profissão
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.Location = new System.Drawing.Point(723, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 29);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "Profissão";
-            this.textBox2.Click += new System.EventHandler(this.Play);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
+            this.Profissão.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Profissão.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profissão.ForeColor = System.Drawing.Color.Silver;
+            this.Profissão.Location = new System.Drawing.Point(723, 222);
+            this.Profissão.Name = "Profissão";
+            this.Profissão.Size = new System.Drawing.Size(210, 29);
+            this.Profissão.TabIndex = 13;
+            this.Profissão.Text = "Profissão";
+            this.Profissão.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
             // 
-            // comboBox4
+            // EstadoCivil
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.EstadoCivil.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.EstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EstadoCivil.ForeColor = System.Drawing.Color.Silver;
+            this.EstadoCivil.FormattingEnabled = true;
+            this.EstadoCivil.Items.AddRange(new object[] {
             "Casado",
             "Solteiro",
             "Viúvo"});
-            this.comboBox4.Location = new System.Drawing.Point(723, 257);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(210, 32);
-            this.comboBox4.TabIndex = 15;
-            this.comboBox4.Text = "Estado Civil";
-            this.comboBox4.TextChanged += new System.EventHandler(this.ComboPlay);
-            this.comboBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.EstadoCivil.Location = new System.Drawing.Point(723, 257);
+            this.EstadoCivil.Name = "EstadoCivil";
+            this.EstadoCivil.Size = new System.Drawing.Size(210, 32);
+            this.EstadoCivil.TabIndex = 15;
+            this.EstadoCivil.Text = "Estado Civil";
+            this.EstadoCivil.TextChanged += new System.EventHandler(this.ComboPlay);
+            this.EstadoCivil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
-            // textBox3
+            // País
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.Location = new System.Drawing.Point(723, 295);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 29);
-            this.textBox3.TabIndex = 16;
-            this.textBox3.Text = "País";
-            this.textBox3.Click += new System.EventHandler(this.Play);
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
+            this.País.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.País.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.País.ForeColor = System.Drawing.Color.Silver;
+            this.País.Location = new System.Drawing.Point(723, 295);
+            this.País.Name = "País";
+            this.País.Size = new System.Drawing.Size(210, 29);
+            this.País.TabIndex = 16;
+            this.País.Text = "País";
+            this.País.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
             // 
-            // textBox4
+            // RG
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox4.Location = new System.Drawing.Point(723, 330);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(69, 29);
-            this.textBox4.TabIndex = 17;
-            this.textBox4.Text = "RG";
-            this.textBox4.Click += new System.EventHandler(this.Play);
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
+            this.RG.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.RG.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RG.ForeColor = System.Drawing.Color.Silver;
+            this.RG.Location = new System.Drawing.Point(723, 330);
+            this.RG.Name = "RG";
+            this.RG.Size = new System.Drawing.Size(69, 29);
+            this.RG.TabIndex = 17;
+            this.RG.Text = "RG";
+            this.RG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
             // 
-            // textBox5
+            // Cidade
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox5.Location = new System.Drawing.Point(798, 330);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(135, 29);
-            this.textBox5.TabIndex = 18;
-            this.textBox5.Text = "Cidade";
-            this.textBox5.Click += new System.EventHandler(this.Play);
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
+            this.Cidade.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cidade.ForeColor = System.Drawing.Color.Silver;
+            this.Cidade.Location = new System.Drawing.Point(798, 330);
+            this.Cidade.Name = "Cidade";
+            this.Cidade.Size = new System.Drawing.Size(135, 29);
+            this.Cidade.TabIndex = 18;
+            this.Cidade.Text = "Cidade";
+            this.Cidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
             // 
-            // textBox6
+            // Rua
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox6.Location = new System.Drawing.Point(723, 365);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(210, 29);
-            this.textBox6.TabIndex = 19;
-            this.textBox6.Text = "Rua";
-            this.textBox6.Click += new System.EventHandler(this.Play);
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
+            this.Rua.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rua.ForeColor = System.Drawing.Color.Silver;
+            this.Rua.Location = new System.Drawing.Point(723, 365);
+            this.Rua.Name = "Rua";
+            this.Rua.Size = new System.Drawing.Size(210, 29);
+            this.Rua.TabIndex = 19;
+            this.Rua.Text = "Rua";
+            this.Rua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
             // 
-            // textBox7
+            // Complemento
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox7.Location = new System.Drawing.Point(723, 400);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(128, 29);
-            this.textBox7.TabIndex = 20;
-            this.textBox7.Text = "Complemento";
-            this.textBox7.Click += new System.EventHandler(this.Play);
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorText);
+            this.Complemento.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Complemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Complemento.ForeColor = System.Drawing.Color.Silver;
+            this.Complemento.Location = new System.Drawing.Point(723, 400);
+            this.Complemento.Name = "Complemento";
+            this.Complemento.Size = new System.Drawing.Size(128, 29);
+            this.Complemento.TabIndex = 20;
+            this.Complemento.Text = "Complemento";
             // 
-            // textBox8
+            // Nº
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox8.Location = new System.Drawing.Point(857, 400);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(76, 29);
-            this.textBox8.TabIndex = 21;
-            this.textBox8.Text = "Nº";
-            this.textBox8.Click += new System.EventHandler(this.Play);
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorNum);
+            this.Nº.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Nº.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nº.ForeColor = System.Drawing.Color.Silver;
+            this.Nº.Location = new System.Drawing.Point(857, 400);
+            this.Nº.Name = "Nº";
+            this.Nº.Size = new System.Drawing.Size(76, 29);
+            this.Nº.TabIndex = 21;
+            this.Nº.Text = "Nº";
+            this.Nº.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorNum);
             // 
-            // comboBox1
+            // Dia
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Dia.AutoCompleteCustomSource.AddRange(new string[] {
             "1",
             "2",
             "3",
@@ -455,14 +454,15 @@
             "29",
             "30",
             "31"});
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboBox1.DropDownHeight = 290;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Dia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Dia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.Dia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Dia.DropDownHeight = 290;
+            this.Dia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dia.ForeColor = System.Drawing.Color.Silver;
+            this.Dia.FormattingEnabled = true;
+            this.Dia.IntegralHeight = false;
+            this.Dia.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -494,58 +494,59 @@
             "29",
             "30",
             "31"});
-            this.comboBox1.Location = new System.Drawing.Point(724, 155);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(69, 27);
-            this.comboBox1.TabIndex = 22;
-            this.comboBox1.Text = "Dia";
-            this.comboBox1.TextChanged += new System.EventHandler(this.ComboPlay);
-            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.Dia.Location = new System.Drawing.Point(724, 151);
+            this.Dia.Name = "Dia";
+            this.Dia.Size = new System.Drawing.Size(69, 27);
+            this.Dia.TabIndex = 22;
+            this.Dia.Text = "Dia";
+            this.Dia.TextChanged += new System.EventHandler(this.ComboPlay);
+            this.Dia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
-            // textBox10
+            // Telefone
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox10.Location = new System.Drawing.Point(776, 435);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(157, 29);
-            this.textBox10.TabIndex = 23;
-            this.textBox10.Text = "Telefone";
-            this.textBox10.Click += new System.EventHandler(this.Play);
-            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorNum);
+            this.Telefone.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefone.ForeColor = System.Drawing.Color.Silver;
+            this.Telefone.Location = new System.Drawing.Point(776, 435);
+            this.Telefone.Name = "Telefone";
+            this.Telefone.Size = new System.Drawing.Size(157, 29);
+            this.Telefone.TabIndex = 23;
+            this.Telefone.Text = "Telefone";
+            this.Telefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorNum);
             // 
-            // textBox9
+            // DDD
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox9.Location = new System.Drawing.Point(723, 435);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(47, 29);
-            this.textBox9.TabIndex = 24;
-            this.textBox9.Text = "DDD";
-            this.textBox9.Click += new System.EventHandler(this.Play);
-            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorNum);
+            this.DDD.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DDD.ForeColor = System.Drawing.Color.Silver;
+            this.DDD.Location = new System.Drawing.Point(723, 435);
+            this.DDD.Name = "DDD";
+            this.DDD.Size = new System.Drawing.Size(47, 29);
+            this.DDD.TabIndex = 24;
+            this.DDD.Text = "DDD";
+            this.DDD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AprovadorNum);
             // 
-            // textBox11
+            // Email
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox11.Location = new System.Drawing.Point(723, 470);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(135, 29);
-            this.textBox11.TabIndex = 25;
-            this.textBox11.Text = "Email";
-            this.textBox11.Click += new System.EventHandler(this.Play);
+            this.Email.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.ForeColor = System.Drawing.Color.Silver;
+            this.Email.Location = new System.Drawing.Point(723, 470);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(135, 29);
+            this.Email.TabIndex = 25;
+            this.Email.Text = "Email";
             // 
-            // comboBox5
+            // Rest
             // 
-            this.comboBox5.DropDownHeight = 290;
-            this.comboBox5.DropDownWidth = 200;
-            this.comboBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.IntegralHeight = false;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.Rest.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Rest.DropDownHeight = 290;
+            this.Rest.DropDownWidth = 200;
+            this.Rest.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rest.ForeColor = System.Drawing.Color.Silver;
+            this.Rest.FormattingEnabled = true;
+            this.Rest.IntegralHeight = false;
+            this.Rest.Items.AddRange(new object[] {
             "@gmail.com",
             "@gmail.com.br",
             "@hotmail.com",
@@ -556,22 +557,23 @@
             "@outlook.com",
             "@outlook.com.br",
             "@cesar.org.br"});
-            this.comboBox5.Location = new System.Drawing.Point(864, 470);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(69, 27);
-            this.comboBox5.TabIndex = 26;
-            this.comboBox5.Text = "@.";
-            this.comboBox5.TextChanged += new System.EventHandler(this.ComboPlay);
-            this.comboBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.Rest.Location = new System.Drawing.Point(864, 470);
+            this.Rest.Name = "Rest";
+            this.Rest.Size = new System.Drawing.Size(69, 27);
+            this.Rest.TabIndex = 26;
+            this.Rest.Text = "@.";
+            this.Rest.TextChanged += new System.EventHandler(this.ComboPlay);
+            this.Rest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
-            // comboBox6
+            // Sangue
             // 
-            this.comboBox6.DropDownHeight = 290;
-            this.comboBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.IntegralHeight = false;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.Sangue.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Sangue.DropDownHeight = 290;
+            this.Sangue.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sangue.ForeColor = System.Drawing.Color.Silver;
+            this.Sangue.FormattingEnabled = true;
+            this.Sangue.IntegralHeight = false;
+            this.Sangue.Items.AddRange(new object[] {
             "O-",
             "O+",
             "A-",
@@ -580,22 +582,23 @@
             "B+",
             "AB-",
             "AB+"});
-            this.comboBox6.Location = new System.Drawing.Point(723, 505);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(88, 27);
-            this.comboBox6.TabIndex = 27;
-            this.comboBox6.Text = "Sangue";
-            this.comboBox6.TextChanged += new System.EventHandler(this.ComboPlay);
-            this.comboBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.Sangue.Location = new System.Drawing.Point(723, 505);
+            this.Sangue.Name = "Sangue";
+            this.Sangue.Size = new System.Drawing.Size(88, 27);
+            this.Sangue.TabIndex = 27;
+            this.Sangue.Text = "Sangue";
+            this.Sangue.TextChanged += new System.EventHandler(this.ComboPlay);
+            this.Sangue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
-            // comboBox7
+            // Raça
             // 
-            this.comboBox7.DropDownHeight = 290;
-            this.comboBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.IntegralHeight = false;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.Raça.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Raça.DropDownHeight = 290;
+            this.Raça.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Raça.ForeColor = System.Drawing.Color.Silver;
+            this.Raça.FormattingEnabled = true;
+            this.Raça.IntegralHeight = false;
+            this.Raça.Items.AddRange(new object[] {
             "Humano",
             "Negro",
             "Asiático",
@@ -604,28 +607,29 @@
             "Pobre",
             "Judeu",
             "Gay"});
-            this.comboBox7.Location = new System.Drawing.Point(817, 505);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(116, 27);
-            this.comboBox7.TabIndex = 28;
-            this.comboBox7.Text = "Raça";
-            this.comboBox7.TextChanged += new System.EventHandler(this.ComboPlay);
-            this.comboBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.Raça.Location = new System.Drawing.Point(817, 505);
+            this.Raça.Name = "Raça";
+            this.Raça.Size = new System.Drawing.Size(116, 27);
+            this.Raça.TabIndex = 28;
+            this.Raça.Text = "Raça";
+            this.Raça.TextChanged += new System.EventHandler(this.ComboPlay);
+            this.Raça.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
-            // numericUpDown1
+            // Filhos
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.numericUpDown1.Location = new System.Drawing.Point(890, 538);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.Filhos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Filhos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.Filhos.ForeColor = System.Drawing.Color.Silver;
+            this.Filhos.Location = new System.Drawing.Point(890, 538);
+            this.Filhos.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(43, 26);
-            this.numericUpDown1.TabIndex = 29;
-            this.numericUpDown1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
+            this.Filhos.Name = "Filhos";
+            this.Filhos.Size = new System.Drawing.Size(43, 26);
+            this.Filhos.TabIndex = 29;
+            this.Filhos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Impedir);
             // 
             // label3
             // 
@@ -649,36 +653,14 @@
             // 
             // Sal
             // 
+            this.Sal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Sal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sal.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.Sal.ForeColor = System.Drawing.Color.Silver;
             this.Sal.Location = new System.Drawing.Point(723, 608);
             this.Sal.Name = "Sal";
             this.Sal.Size = new System.Drawing.Size(210, 29);
             this.Sal.TabIndex = 33;
             this.Sal.Text = "Salário";
-            // 
-            // Feminino
-            // 
-            this.Feminino.AutoSize = true;
-            this.Feminino.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.Feminino.Location = new System.Drawing.Point(723, 188);
-            this.Feminino.Name = "Feminino";
-            this.Feminino.Size = new System.Drawing.Size(108, 28);
-            this.Feminino.TabIndex = 34;
-            this.Feminino.Text = "Feminino";
-            this.Feminino.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.radioButton1.Location = new System.Drawing.Point(830, 188);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 28);
-            this.radioButton1.TabIndex = 35;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Masculino";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -687,16 +669,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(465, 303);
             this.listBox1.TabIndex = 36;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -708,13 +680,24 @@
             this.button4.Text = "Pesquisar";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // listBox2
+            // Sexualidade
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(12, 56);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(465, 303);
-            this.listBox2.TabIndex = 39;
+            this.Sexualidade.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Sexualidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sexualidade.ForeColor = System.Drawing.Color.Silver;
+            this.Sexualidade.FormattingEnabled = true;
+            this.Sexualidade.Items.AddRange(new object[] {
+            "Homem",
+            "Mulher",
+            "Viado",
+            "Gata",
+            "Sapatão",
+            "Indeciso"});
+            this.Sexualidade.Location = new System.Drawing.Point(723, 184);
+            this.Sexualidade.Name = "Sexualidade";
+            this.Sexualidade.Size = new System.Drawing.Size(210, 32);
+            this.Sexualidade.TabIndex = 39;
+            this.Sexualidade.Text = "Sexualidade";
             // 
             // Form1
             // 
@@ -722,40 +705,39 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(982, 717);
+            this.Controls.Add(this.Sexualidade);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.Feminino);
             this.Controls.Add(this.Sal);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.Filhos);
+            this.Controls.Add(this.Raça);
+            this.Controls.Add(this.Sangue);
+            this.Controls.Add(this.Rest);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.DDD);
+            this.Controls.Add(this.Telefone);
+            this.Controls.Add(this.Dia);
+            this.Controls.Add(this.Nº);
+            this.Controls.Add(this.Complemento);
+            this.Controls.Add(this.Rua);
+            this.Controls.Add(this.Cidade);
+            this.Controls.Add(this.RG);
+            this.Controls.Add(this.País);
+            this.Controls.Add(this.EstadoCivil);
+            this.Controls.Add(this.Profissão);
+            this.Controls.Add(this.Ano);
+            this.Controls.Add(this.Mês);
             this.Controls.Add(label2);
             this.Controls.Add(label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Nome);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.Recuperar);
+            ((System.ComponentModel.ISupportInitialize)(this.Filhos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -764,34 +746,31 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox Nome;
+        private System.Windows.Forms.ComboBox Mês;
+        private System.Windows.Forms.ComboBox Ano;
+        private System.Windows.Forms.TextBox Profissão;
+        private System.Windows.Forms.ComboBox EstadoCivil;
+        private System.Windows.Forms.TextBox País;
+        private System.Windows.Forms.TextBox RG;
+        private System.Windows.Forms.TextBox Cidade;
+        private System.Windows.Forms.TextBox Rua;
+        private System.Windows.Forms.TextBox Complemento;
+        private System.Windows.Forms.TextBox Nº;
+        private System.Windows.Forms.ComboBox Dia;
+        private System.Windows.Forms.TextBox Telefone;
+        private System.Windows.Forms.TextBox DDD;
+        private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.ComboBox Rest;
+        private System.Windows.Forms.ComboBox Sangue;
+        private System.Windows.Forms.ComboBox Raça;
+        private System.Windows.Forms.NumericUpDown Filhos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox Sal;
-        private System.Windows.Forms.RadioButton Feminino;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ComboBox Sexualidade;
     }
 }
 

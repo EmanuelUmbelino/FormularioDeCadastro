@@ -12,18 +12,63 @@ namespace Cadastro
 {
     public partial class Form1 : Form
     {
+        List<string> funcionarios = new List<string>();
         public Form1()
         {
             InitializeComponent();
-        }
-        // quando clicar, zerar o texto e mudar sua cor.
-        private void Play(object sender, EventArgs e)
-        {
-            TextBox t = sender as TextBox;
-            if (t.ForeColor != Color.Black)
+            // para pegar as caixar e executar suas funçoes quando selecionadas ou n
+            foreach (Control ctrl in Controls)
             {
-                t.Text = "";
-                t.ForeColor = Color.Black;
+                if (ctrl.GetType().ToString().Equals("System.Windows.Forms.TextBox"))
+                {
+                    TextBox obj = (TextBox)ctrl;
+                    obj.GotFocus += TextBoxGotFocus;
+                    obj.LostFocus += TextBoxLostFocus;
+                }
+                else if (ctrl.GetType().ToString().Equals("System.Windows.Forms.ComboBox"))
+                {
+                    ComboBox obj = (ComboBox)ctrl;
+                    obj.GotFocus += ComboBoxGotFocus;
+                    obj.LostFocus += ComboBoxLostFocus;
+                }
+            }
+        }
+        // para zerar e mudar a cor quando clicada
+        private void TextBoxGotFocus(object sender, EventArgs e)
+        {
+            TextBox obj = (TextBox)sender;
+            if (obj.ForeColor != Color.Black)
+            {
+                obj.Text = "";
+                obj.ForeColor = Color.Black;
+            }
+        }
+        private void ComboBoxGotFocus(object sender, EventArgs e)
+        {
+            ComboBox obj = (ComboBox)sender;
+            if (obj.ForeColor != Color.Black)
+            {
+                obj.Text = "";
+                obj.ForeColor = Color.Black;
+            }
+        }
+        // para caso nd esteja escrito quando deselecionado voltar a cor anterior e colocar o texto padrão
+        private void TextBoxLostFocus(object sender, EventArgs e)
+        {
+            TextBox obj = (TextBox)sender;
+            if (obj.ForeColor == Color.Black && obj.Text == "")
+            {
+                obj.Text = obj.Name;
+                obj.ForeColor = Color.Gray;
+            }
+        }
+        private void ComboBoxLostFocus(object sender, EventArgs e)
+        {
+            ComboBox obj = (ComboBox)sender;
+            if (obj.ForeColor == Color.Black && obj.Text == "")
+            {
+                obj.Text = obj.Name;
+                obj.ForeColor = Color.Gray;
             }
         }
         private void ComboPlay(object sender, EventArgs e)
@@ -52,41 +97,73 @@ namespace Cadastro
         // add para lista
         private void TestAll(object sender, EventArgs e)
         {
-            List<string> todos = new List<string>();
-            todos.Add(textBox1.Text);
-            todos.Add(comboBox1.Text);
-            todos.Add(comboBox2.Text);
-            todos.Add(comboBox3.Text);
-            if (Feminino.Checked) todos.Add(Feminino.Text);
-            else todos.Add(radioButton1.Text);
-            todos.Add(textBox2.Text);
-            todos.Add(comboBox4.Text);
-            todos.Add(textBox3.Text);
-            todos.Add(textBox4.Text);
-            todos.Add(textBox5.Text);
-            todos.Add(textBox6.Text);
-            todos.Add(textBox7.Text);
-            todos.Add(textBox8.Text);
-            todos.Add(textBox9.Text);
-            todos.Add(textBox10.Text);
-            todos.Add(textBox11.Text);
-            todos.Add(comboBox5.Text);
-            todos.Add(comboBox6.Text);
-            todos.Add(comboBox7.Text);
-            todos.Add(numericUpDown1.Value.ToString());
-            listBox1.Items.Add(todos[0] + "   " + todos[1] + "/" + todos[2] + "/" + todos[3] + "   " + 
-                todos[4] + "   " + todos[5] + "   " + todos[6] + "   " + todos[7] + "   " + todos[8] + "   " +
-                todos[9] + "   " + todos[10] + "   " + todos[11] + "   " + todos[12] + "   " + todos[13] +
-                "   " + todos[14] + "   " + todos[15] + todos[16] + "   " + todos[17] +
-                "   " + todos[18] + "   " + todos[19]);
-            if(listBox1.Size.Height < 600)
-                listBox1.Size += listBox1.Size;
+            bool testar = false;
+            // testar se todos estão com algo escrito
+            foreach (Control ctrl in Controls)
+            {
+                if (ctrl.GetType().ToString().Equals("System.Windows.Forms.TextBox"))
+                {
+                    TextBox obj = (TextBox)ctrl;
+                    if (obj.Text.Equals(obj.Name))
+                    {
+                        testar = true;
+                        break;
+                    }
+                }
+                else if (ctrl.GetType().ToString().Equals("System.Windows.Forms.ComboBox"))
+                {
+                    ComboBox obj = (ComboBox)ctrl;
+                    if (obj.Text.Equals(obj.Name))
+                    {
+                        testar = true;
+                        break;
+                    }
+                }
+            }
+            if (!testar) 
+            {
+                List<string> pessoa = new List<string>();
+   
+                pessoa.Add(Nome.Text);
+                pessoa.Add(Dia.Text);
+                pessoa.Add(Mês.Text);
+                pessoa.Add(Ano.Text);
+                pessoa.Add(Sexualidade.Text);
+                pessoa.Add(Profissão.Text);
+                pessoa.Add(EstadoCivil.Text);
+                pessoa.Add(País.Text);
+                pessoa.Add(RG.Text);
+                pessoa.Add(Cidade.Text);
+                pessoa.Add(Rua.Text);
+                pessoa.Add(Complemento.Text);
+                pessoa.Add(Nº.Text);
+                pessoa.Add(DDD.Text);
+                pessoa.Add(Telefone.Text);
+                pessoa.Add(Email.Text);
+                pessoa.Add(Sangue.Text);
+                pessoa.Add(Raça.Text);
+                pessoa.Add(Filhos.Text);
+                funcionarios.Add(pessoa[0] + "##" + pessoa[1] + "##" + pessoa[2] + "##" + pessoa[3] + "##" +
+                    pessoa[4] + "##" + pessoa[5] + "##" + pessoa[6] + "##" + pessoa[7] + "##" + pessoa[8] + "##" +
+                    pessoa[9] + "##" + pessoa[10] + "##" + pessoa[11] + "##" + pessoa[12] + "##" + pessoa[13] +
+                    "##" + pessoa[14] + "##" + pessoa[15] + "##" + pessoa[16] + "##" + pessoa[17] +
+                    "##" + pessoa[18]);
+                listBox1.Items.Add(pessoa[0]);
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"Text.txt", true))
+                {
+                    file.WriteLine(funcionarios.Last());
+                }
+            }
         }
-        // mudar o tamanho no voltar e n
-        private void button2_Click(object sender, EventArgs e)
+        // pegar os funcionarios ja adcionados
+        private void Recuperar(object sender, EventArgs e)
         {
-            if (listBox1.Size.Height > 600)
-                listBox1.Size = listBox2.Size;
+            string[] lines = System.IO.File.ReadAllLines(@"Text.txt");
+            foreach (string line in lines)
+            {
+                funcionarios.Add(line);
+                listBox1.Items.Add(funcionarios.Last());
+            }
         }
     }
 }
